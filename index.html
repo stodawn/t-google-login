@@ -20,8 +20,8 @@
             window.location.replace("https://stodawn.github.io/responses/?title=Error&text=Invalid%20Identity&icon=error")
             return;
         }
-            
-        window.location.replace(`https://accounts.google.com/o/oauth2/auth?client_id=925845291492-9t920r51ddcjddo3t70nl8qatp2qcd46.apps.googleusercontent.com&redirect_uri=http://localhost:8080/oauth2/google-redirect&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&state=tbot:${id}`)
+        let goTo = `https://accounts.google.com/o/oauth2/auth?client_id=925845291492-9t920r51ddcjddo3t70nl8qatp2qcd46.apps.googleusercontent.com&redirect_uri=http://localhost:8080/oauth2/google-redirect&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&state=tbot:${id}<>referralCode:${params.referralCode}`
+        window.location.replace(goTo)
         }
 
         </script>
